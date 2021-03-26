@@ -1,5 +1,8 @@
 {
-  "name": "xlsx-lite",
+  "name": "@karapetyansa/xlsx-lite",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "version": "0.0.14",
   "description": "Light XLSX Spreadsheet Creator",
   "keywords": [
@@ -13,7 +16,10 @@
   "files": [
     "dist"
   ],
-  "repository": "git://github.com/alimo/xlsx-lite.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:karapetyansa/xlsx-lite.git"
+  },
   "author": "Ali Mohammadi <alimohammadi75@gmail.com>",
   "license": "MIT",
   "private": false,
