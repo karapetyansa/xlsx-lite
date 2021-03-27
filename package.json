@@ -10,8 +10,9 @@
     "spreadsheet",
     "excel"
   ],
-  "main": "dist/xlsx.cjs.js",
+  "main": "dist/xlsx.esm.js",
   "module": "dist/xlsx.esm.js",
+  "jsnext:main": "dist/xlsx.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -28,6 +29,10 @@
     "test": "node test.js",
     "lint": "eslint --ext .js,.ts src"
   },
+  "peerDependencies": {
+    "file-saver": ">=2",
+    "uzip": "0.20201231.0"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
@@ -38,16 +43,18 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "file-saver": "^2.0.2",
     "prettier": "^1.19.1",
     "rollup": "^1.29.1",
     "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^5.2.0",
     "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "uzip": "0.20201231.0"
   },
   "dependencies": {
-    "file-saver": "^2.0.2",
-    "set-immediate-shim": "^2.0.0",
-    "uzip": "^0.20201231.0"
+    "set-immediate-shim": "^2.0.0"
   }
 }
