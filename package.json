@@ -10,9 +10,10 @@
     "spreadsheet",
     "excel"
   ],
-  "main": "dist/xlsx.esm.js",
-  "module": "dist/xlsx.esm.js",
-  "jsnext:main": "dist/xlsx.esm.js",
+  "main": "dist/xlsx.js",
+  "exports": "./dist/xlsx.modern.js",
+  "module": "dist/xlsx.module.js",
+  "unpkg": "dist/xlsx.umd.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -26,6 +27,7 @@
   "private": false,
   "scripts": {
     "build": "rollup --config rollup.config.js && tsc --emitDeclarationOnly",
+    "build:microbundle": "microbundle",
     "test": "node test.js",
     "lint": "eslint --ext .js,.ts src"
   },
@@ -44,17 +46,18 @@
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
     "file-saver": "^2.0.2",
+    "microbundle": "^0.13.0",
     "prettier": "^1.19.1",
     "rollup": "^1.29.1",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "source-map-explorer": "^2.5.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
     "uzip": "0.20201231.0"
   },
-  "dependencies": {
-    "set-immediate-shim": "^2.0.0"
-  }
+  "dependencies": {}
 }
