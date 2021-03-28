@@ -26,7 +26,6 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "rollup --config rollup.config.js && tsc --emitDeclarationOnly",
     "build:microbundle": "microbundle",
     "test": "node test.js",
     "lint": "eslint --ext .js,.ts src"
